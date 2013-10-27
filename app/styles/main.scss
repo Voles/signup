@@ -1,0 +1,24 @@
+/* --- Imports --- */
+@import "compass_twitter_bootstrap/_reset";
+@import "other/_fonts";
+
+/* --- General --- */
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	@include open-sans(200);
+}
+
+.icon { @include pictos() }
+.left { float: left }
+.right { float: right }
+
+/* --- Pages --- */
+@import "pages/home";
+
+/* --- Responsive --- */
+@import "responsive";

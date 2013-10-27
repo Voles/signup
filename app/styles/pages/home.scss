@@ -1,0 +1,262 @@
+/* --- Imports --- */
+@import "compass";
+@import "other/_fonts";
+
+.container {
+	background: #f7f7f7;
+	width: 100%;
+}
+
+/* --- Heading --- */
+.heading {
+	text-align: center;
+	height: 500px;
+	width: 100%;
+	background: url(../images/headers/final.jpg);
+	background-size: 100% auto;
+	background-position: 0 -150px;
+	position: relative;
+
+	h1 {
+		margin: 0 auto 15px auto;
+		color: white;
+		font-size: 6em;
+		text-transform: uppercase;
+		padding: 0;
+		position:absolute;
+		bottom: 100px;
+		right: 50px;
+		font-family: 'Roboto Condensed', sans-serif;
+		@include text-shadow(rgba(0, 0, 0, .25) 0px 2px 1px);
+	}
+
+	h2 {
+		font-size: 1.35em;
+		font-weight: 200;
+		margin: 0 auto;
+		position: absolute;
+		bottom: 50px;
+		padding: 12px 20px 15px 20px;
+		right: 52px;
+		color: rgba(255, 255, 255, .8);
+		background: rgba(0, 0, 0, .6);
+		@include text-shadow(rgba(0, 0, 0, .4) 0 1px 0);
+	}
+
+	.subscribe {
+		font-size: 1.35em;
+		font-weight: 200;
+		margin: 0 auto;
+		position: absolute;
+		padding: 12px 20px 15px 20px;
+		color: white;
+		background: rgba(0, 0, 0, .7);
+		text-decoration: none;
+		bottom: 50px;
+		right: 275px;
+		color: rgba(0, 0, 0, .6);
+		background: rgba(255, 255, 255, .5);
+		@include text-shadow(rgba(255, 255, 255, .4) 0 1px 0);
+	}
+}
+
+/* --- Form --- */
+form {
+	border-top: 4px solid rgba(0, 0, 0, .08);
+	width: 100%;
+	padding: 50px 0 150px 0;
+
+	legend {
+		color: #7c7c7c;
+		text-transform: uppercase;
+		font-size: 1.3em;
+		font-weight: bold;
+		line-height: 3.5em;
+		overflow: hidden;
+		width: 100%;
+		padding: 0;
+
+		.title {
+			margin: 15px 0 0 16px;
+		}
+
+		.progress {
+			margin: 40px 20px 0 0;
+			font-weight: normal;
+			font-size: .6em;
+			background: #e2e2e2;
+			line-height: 2em;
+			padding: 0 10px;
+			@include border-radius(15px);
+		}
+	}
+
+	fieldset {
+		width: 570px;
+		margin: 0 auto;
+		padding: 0;
+		border: none;
+
+		&.validation {
+			margin: 0 auto 35px auto;
+			font-size: .9em;
+
+			p {
+				border: 1px solid;
+				padding: 25px;
+				@include border-radius(5px);
+
+				&.error {
+					border-color: #D8000C;
+					color: #D8000C;
+					background: #FFBABA;
+				}
+
+				&.success {
+					border-color: #4F8A10;
+					color: #4F8A10;
+					background: #DFF2BF;
+				}
+			}
+		}
+		&.payment {
+			label {
+				font-size: .95em;
+				color: #333333;
+			}
+
+			.option {
+				margin: 0;
+				line-height: 3em;
+				background: #eaeaea;
+				width: 49%;
+				@include border-radius(10px);
+
+				input {
+					margin: 0  6px 0 20px;
+				}
+
+				span {
+					display: block;
+					padding: 0 15px 15px 50px;
+					line-height: 1.5em;
+					font-size: .8em;
+
+					strong {
+						font-weight: 600;
+					}
+				}
+			}
+		}
+
+		&.payment-info {
+			p {
+				background: white;
+				border: 1px solid #cccccc;
+				font-size: .9em;
+				padding: 20px;
+				margin: 20px 0 0 0;
+				@include border-radius(4px);
+			}
+		}
+		&.submit {
+			margin-top: 25px;
+		}
+	}
+
+	.small {
+		&.left, &.right {
+			width: 49%;
+		}
+	}
+
+	input[type="text"] {
+		clear: both;
+		border: 1px solid #c8c8c8;
+		padding: 12px 0;
+		text-indent: 16px;
+		display: block;
+		width: 100%;
+		margin: 0 0 12px 0;
+		font-size: 1em;
+		color: #555555;
+		@include open-sans(200);
+		@include border-radius(3px);
+		@include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
+		@include transition-property(border);
+		@include transition-property(box-shadow);
+		@include transition-duration(.2s);
+		@include transition-timing-function(ease-in);
+
+		&:focus {
+			outline: 0;
+			border-color: rgba(82, 168, 236, 0.8);
+			@include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6));
+		}
+
+		&.required.error {
+			color: #c09853;
+			border: 1px solid #c09853;
+			background: #fcf8e3 url(../images/icon-warning.png) no-repeat 525px center;
+			@include box-shadow(none);
+
+			&:focus {
+				border: 1px solid #c8c8c8;
+				color: #a3a3a3;
+				color: #555555;
+				border-color: rgba(82, 168, 236, 0.8);
+				outline: 0;
+				outline: thin dotted 9;
+				@include open-sans(200);
+				@include box-shadow(rgba(0, 0, 0, .1) 0 0 0px 3px);
+				@include border-radius(3px);
+				@include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
+				@include transition-property(border);
+				@include transition-property(box-shadow);
+				@include transition-duration(.2s);
+				@include transition-timing-function(ease-in);
+				@include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6));
+			}
+		}
+
+		&.required.valid {
+			background: white url(../images/icon-valid.png) no-repeat 528px center;
+		}
+	}
+
+	.small input[type="text"] {
+		&.required {
+			&.valid, &.error {
+				background-position: 245px center;
+			}
+		}
+	}
+
+	input[type="submit"] {
+		text-align: center;
+		border: 1px solid #639e13;
+		background: #93c94a;
+		width: 100%;
+		line-height: 65px;
+		height: 65px;
+		color: white;
+		font-size: 1.1em;
+		@include open-sans(600);
+		@include border-radius(3px);
+	}
+}
+
+/* --- To top --- */
+.to-top {
+	position: fixed;
+	display: block;
+	background: grey;
+	width: 65px;
+	height: 65px;
+	bottom: 50px;
+	right: 50px;
+	background: url(../images/arrow-up.png) no-repeat center center;
+	background-size: 25%;
+	border: 4px solid black;
+	@include border-radius(5px);
+}

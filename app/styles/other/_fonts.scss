@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'pictos';
+  src: url('../fonts/pictos/pictos_rip-webfont.eot');
+  src: url('../fonts/pictos/pictos_rip-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/pictos/pictos_rip-webfont.woff') format('woff'), url('../fonts/pictos/pictos_rip-webfont.ttf') format('truetype'), url('../fonts/pictos/pictos_rip-webfont.svg#pictos_ripregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin kreon($weight: 500) {
+	font-family: 'Kreon', serif;
+	font-weight: $weight;
+}
+
+@mixin open-sans($weight: 500) {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: $weight;
+}
+
+@mixin pictos() {
+	font-family: Pictos;
+}
